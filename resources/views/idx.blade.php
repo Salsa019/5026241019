@@ -12,14 +12,14 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --ink:     #1a1a2e;
-            --cream:   #f5f0e8;
-            --gold:    #c8963e;
-            --rust:    #b5451b;
-            --sage:    #4a7c6f;
-            --muted:   #7a7068;
-            --card-bg: #ffffff;
-            --border:  #e2d9cc;
+            --ink:     #140D1B;
+            --muted:   #54475E;
+            --cream:   #EFE6F2;
+            --card-bg: #FFFFFF;
+            --border:  #D0BDD5;
+            --gold:    #B3698B;
+            --rust:    #733B7B;
+            --sage:    #8D70B8;
         }
 
         body {
@@ -206,7 +206,7 @@
 
     <main class="sessions">
 
-        {{-- ── Pertemuan 1 ── --}}
+        {{-- Pertemuan 1 --}}
         <div class="session-block">
             <div class="session-label">
                 <div class="session-number">01</div>
@@ -216,12 +216,12 @@
                 <div class="card">
                     <span class="card-name">Index</span>
                     <span class="card-desc">Tampilan utama dari salsa019.github.io</span>
-                    <a href="{{ url('/idx') }}" class="btn btn-full">Buka →</a>
+                    <a href="{{ url('/index') }}" class="btn btn-full">Open</a>
                 </div>
             </div>
         </div>
 
-        {{-- ── Pertemuan 2 ── --}}
+        {{-- Pertemuan 2 --}}
         <div class="session-block">
             <div class="session-label">
                 <div class="session-number">02</div>
@@ -231,20 +231,20 @@
                 <div class="card">
                     <span class="card-name">Intro</span>
                     <span class="card-desc">File pembelajaran basic HTML pertemuan 2</span>
-                    <a href="{{ url('/p2intro') }}" class="btn btn-full">Buka →</a>
+                    <a href="{{ url('/intro') }}" class="btn btn-full">Open</a>
                 </div>
                 <div class="card">
                     <span class="card-name">News &amp; News 1</span>
                     <span class="card-desc">Latihan membuat halaman berita</span>
                     <div class="btn-row">
-                        <a href="{{ url('/p2news') }}" class="btn">News</a>
-                        <a href="{{ url('/p2news1') }}" class="btn">News 1</a>
+                        <a href="{{ url('/news') }}" class="btn">News</a>
+                        <a href="{{ url('/news1') }}" class="btn">News 1</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        {{-- ── Pertemuan 3 ── --}}
+        {{-- Pertemuan 3 --}}
         <div class="session-block">
             <div class="session-label">
                 <div class="session-number">03</div>
@@ -254,22 +254,22 @@
                 <div class="card">
                     <span class="card-name">Contoh</span>
                     <span class="card-desc">Tugas pertemuan 3 contoh implementasi Tables</span>
-                    <a href="{{ url('/p3contohtables') }}" class="btn btn-full">Buka →</a>
+                    <a href="{{ url('/tables') }}" class="btn btn-full">Open</a>
                 </div>
                 <div class="card">
                     <span class="card-name">Responsive</span>
                     <span class="card-desc">Implementasi layout responsif Bootstrap</span>
-                    <a href="{{ url('/p3responsive') }}" class="btn btn-full">Buka →</a>
+                    <a href="{{ url('/responsive') }}" class="btn btn-full">Open</a>
                 </div>
                 <div class="card">
                     <span class="card-name">Template</span>
                     <span class="card-desc">Template Bootstrap 4</span>
-                    <a href="{{ url('/p3template') }}" class="btn btn-full">Buka →</a>
+                    <a href="{{ url('/template') }}" class="btn btn-full">Open</a>
                 </div>
             </div>
         </div>
 
-        {{-- ── Pertemuan 4 ── --}}
+        {{-- Pertemuan 4 --}}
         <div class="session-block">
             <div class="session-label">
                 <div class="session-number">04</div>
@@ -279,12 +279,12 @@
                 <div class="card">
                     <span class="card-name">Pertemuan 4</span>
                     <span class="card-desc">File pembelajaran dan latihan pertemuan 4</span>
-                    <a href="{{ url('/p4') }}" class="btn btn-full">Buka →</a>
+                    <a href="{{ url('/pertemuan4') }}" class="btn btn-full">Open</a>
                 </div>
             </div>
         </div>
 
-        {{-- ── Pertemuan 5 ── --}}
+        {{-- Pertemuan 5 --}}
         <div class="session-block">
             <div class="session-label">
                 <div class="session-number">05</div>
@@ -292,45 +292,37 @@
             </div>
             <div class="cards">
                 <div class="card">
-                    <span class="card-name">Linktree</span>
-                    <span class="card-desc">Tugas membuat halaman linktree pribadi</span>
-                    <a href="{{ url('/5026241019linktree') }}" class="btn btn-full">Buka →</a>
-                </div>
-                <div class="card">
                     <span class="card-name">Pertemuan 5</span>
                     <span class="card-desc">File pembelajaran dan latihan pertemuan 5</span>
-                    <a href="{{ url('/p5') }}" class="btn btn-full">Buka →</a>
+                    <a href="{{ url('/pertemuan5') }}" class="btn btn-full">Open</a>
+                </div>
+                <div class="card">
+                    <span class="card-name">Linktree</span>
+                    <span class="card-desc">Tugas membuat halaman linktree pribadi</span>
+                    <a href="{{ url('/linktree') }}" class="btn btn-full">Open</a>
                 </div>
             </div>
         </div>
 
-        {{-- ── Pertemuan 6 ── --}}
-        <div class="session-block">
-            <div class="session-label">
-                <div class="session-number">06</div>
-                <div class="session-title">Pertemuan 6</div>
-            </div>
-            <div class="cards">
-                {{-- Tambahkan card pertemuan 6 di sini --}}
-                <div class="card" style="opacity:.5; pointer-events:none;">
-                    <span class="card-name">—</span>
-                    <span class="card-desc">Belum ada halaman yang ditambahkan</span>
-                </div>
-            </div>
-        </div>
-
-        {{-- ── ETS ── --}}
+        {{-- ETS --}}
         <div class="session-block">
             <div class="session-label">
                 <div class="session-number" style="color:var(--rust); opacity:.5;">ETS</div>
-                <div class="session-title">Ujian Tengah Semester</div>
+                <div class="session-title">Evaluasi Tengah Semester</div>
             </div>
             <div class="cards">
-                {{-- Tambahkan card ETS di sini --}}
-                <div class="card" style="opacity:.5; pointer-events:none;">
-                    <span class="ets-badge">ETS</span>
-                    <span class="card-name">—</span>
-                    <span class="card-desc">Belum ada halaman yang ditambahkan</span>
+                <div class="card">
+                    <span class="card-name">Tugas Pra ETS</span>
+                    <span class="card-desc">Tugas makeover instagram sebagai syarat</span>
+                    <a href="{{ url('/pra-ets') }}" class="btn btn-full">Open</a>
+                </div>
+                <div class="card">
+                    <spam class="ets-badge">ETS</spam>
+                    <span class="card-desc">File hasil Evaluasi Tengah Semester</span>
+                    <div class="btn-row">
+                        <a href="{{ url('/ets') }}" class="btn">ETS</a>
+                        <a href="{{ url('https://youtu.be/LdS4Na7P0dY') }}" class="btn">Video</a>
+                    </div>
                 </div>
             </div>
         </div>
