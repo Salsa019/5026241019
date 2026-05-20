@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\BlogController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,3 +33,11 @@ Route::get('index', [PageController::class, 'githubindex']);
 Route::get('linktree', [PageController::class, 'p5linktree']);
 Route::get('pra-ets', [PageController::class, 'tugas_ets']);
 Route::get('ets', [PageController::class, 'ets_asa']);
+
+Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+//blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
