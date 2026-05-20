@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Makeover Instagram @poco_id - 5026241019</title>
+    <title>Makeover Instagram - 5026241019</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
