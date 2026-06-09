@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\SepedaDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -49,9 +50,17 @@ Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
 //route CRUD tabel pegawai
 Route::get('/pegawai', [PegawaiDBController::class, 'index']);
+Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
 Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
-Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+Route::get('/sepeda', [SepedaDBController::class, 'indexsepeda']);
+Route::get('/sepeda/cari', [SepedaDBController::class, 'cari']);
+Route::get('/sepeda/tambah', [SepedaDBController::class, 'tambah']);
+Route::post('/sepeda/store', [SepedaDBController::class, 'store']);
+Route::get('/sepeda/edit/{kode}', [SepedaDBController::class, 'edit']);
+Route::post('/sepeda/update', [SepedaDBController::class, 'update']);
+Route::get('/sepeda/hapus/{kode}', [SepedaDBController::class, 'hapus']);
