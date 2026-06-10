@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SepedaDBController;
+use App\Http\Controllers\NilaikuliahDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -64,3 +65,7 @@ Route::post('/sepeda/store', [SepedaDBController::class, 'store']);
 Route::get('/sepeda/edit/{kode}', [SepedaDBController::class, 'edit']);
 Route::post('/sepeda/update', [SepedaDBController::class, 'update']);
 Route::get('/sepeda/hapus/{kode}', [SepedaDBController::class, 'hapus']);
+
+Route::get('/nilaikuliah', [NilaikuliahDBController::class, 'indexlatihaneas']);
+Route::get('/nilaikuliah/tambah', [NilaikuliahDBController::class, 'tambah']);
+Route::post('/nilaikuliah/store', [NilaikuliahDBController::class, 'store']);
