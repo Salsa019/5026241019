@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\DB;
 
 class NilaikuliahDBController extends Controller
 {
-    public function indexlatihaneas()
+    public function index()
     {
 
             // mengambil data dari table nilaikuliah
-        $nilaikuliah = DB::table('nilaikuliah')->get();
+        $nilaikuliah = DB::table('nilaikuliah')->orderBy('NRP')->get();
     	// mengirim data nilai ke view index
-    	return view('indexlatihaneas',['nilaikuliah' => $nilaikuliah]);
+    	return view('nilaikuliah.index', compact('nilaikuliah'));
     }
 
     	// method untuk menampilkan view form tambah siswa
@@ -21,7 +21,7 @@ class NilaikuliahDBController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('tambahlatihaneas');
+		return view('nilaikuliah.tambah');
 
 	}
 
@@ -35,7 +35,8 @@ class NilaikuliahDBController extends Controller
 			'SKS' => $request->SKS
 		]);
 		// alihkan halaman ke halaman pegawai
-		return redirect('/nilaikuliah');
+		// return redirect('/nilaikuliah');
+        return redirect()->route('nilaikuliah.index');
 
 	}
 

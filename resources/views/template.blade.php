@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                         <a class="nav-link" href="/nilaikuliah">Latihan 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Latihan 2</a>
+                        <a class="nav-link" href="/belanja">Latihan 2</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>

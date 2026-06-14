@@ -2,7 +2,7 @@
 @section('judul_halaman', 'Data Nilai Kuliah')
 @section('konten')
     <p>
-        <br><a href="/nilaikuliah" class="btn btn-secondary mb-4">Kembali</a>
+        <br><a href="{{ route('nilaikuliah.index') }}" class="btn btn-secondary mb-4">Kembali</a>
     </p>
     <div class="card">
         <div class="card-header">
@@ -10,7 +10,7 @@
         </div>
 
         <div class="card-body">
-            <form action="/nilaikuliah/store" method="post">
+            <form action="{{ route('nilaikuliah.store') }}" method="post">
                 {{ csrf_field() }}
 
                 <div class="row mb-3">

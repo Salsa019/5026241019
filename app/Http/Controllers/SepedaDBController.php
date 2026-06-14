@@ -39,10 +39,10 @@ class SepedaDBController extends Controller
     }
 
     // method untuk edit data sepeda
-    public function edit($kode)
+    public function edit($kodesepeda)
     {
         // mengambil data sepeda berdasarkan kode yang dipilih
-        $sepeda = DB::table('sepeda')->where('kodesepeda', $kode)->get();
+        $sepeda = DB::table('sepeda')->where('kodesepeda', $kodesepeda)->get();
         // passing data sepeda yang didapat ke view editsepeda.blade.php
         return view('editsepeda', ['sepeda' => $sepeda]);
     }
@@ -53,7 +53,7 @@ class SepedaDBController extends Controller
         // update data sepeda
         DB::table('sepeda')->where('kodesepeda', $request->kodesepeda)->update([
             'merksepeda'  => $request->merksepeda,
-            'stocksepeda' => $request->stockssepeda,
+            'stocksepeda' => $request->stocksepeda,
             'tersedia'    => $request->tersedia
         ]);
         // alihkan halaman ke halaman sepeda
@@ -61,10 +61,10 @@ class SepedaDBController extends Controller
     }
 
     // method untuk hapus data sepeda
-    public function hapus($kode)
+    public function hapus($kodesepeda)
     {
         // menghapus data sepeda berdasarkan kode yang dipilih
-        DB::table('sepeda')->where('kodesepeda', $kode)->delete();
+        DB::table('sepeda')->where('kodesepeda', $kodesepeda)->delete();
 
         // alihkan halaman ke halaman sepeda
         return redirect('/sepeda');

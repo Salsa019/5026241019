@@ -3,7 +3,7 @@
 @section('konten')
 
     <p>
-        <br><a href="/nilaikuliah/tambah" class="btn btn-primary">Tambah Nilai Baru</a>
+        <br><a href="{{ route('nilaikuliah.tambah') }}" class="btn btn-primary">Tambah Nilai Baru</a>
     </p>
 
     <table class="table table-striped table-hover">
