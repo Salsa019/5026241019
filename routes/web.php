@@ -87,4 +87,4 @@ Route::delete('/siswa/{nrp}', [SiswaController::class, 'hapus'])->name('siswa.ha
 Route::get('/belanja', [BelanjaDBController::class, 'index'])->name('belanja.index');
 Route::get('/belanja/tambah', [BelanjaDBController::class, 'tambah'])->name('belanja.tambah');
 Route::post('/belanja/store', [BelanjaDBController::class, 'store'])->name('belanja.store');
-Route::delete('/belanja/hapus/{id}', [BelanjaDBController::class, 'hapus'])->name('belanja.hapus');
+Route::get('/belanja/hapus/{id}', [BelanjaDBController::class, 'hapus'])->name('belanja.hapus');
