@@ -10,6 +10,7 @@ use App\Http\Controllers\SepedaDBController;
 use App\Http\Controllers\NilaikuliahDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaDBController;
+use App\Http\Controllers\NilaiPesertaDBController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,3 +89,8 @@ Route::get('/belanja', [BelanjaDBController::class, 'index'])->name('belanja.ind
 Route::get('/belanja/tambah', [BelanjaDBController::class, 'tambah'])->name('belanja.tambah');
 Route::post('/belanja/store', [BelanjaDBController::class, 'store'])->name('belanja.store');
 Route::get('/belanja/hapus/{id}', [BelanjaDBController::class, 'hapus'])->name('belanja.hapus');
+
+// route crud eas -> index, tambah data
+Route::get('/eas', [NilaiPesertaDBController::class, 'index'])->name('eas.index');
+Route::get('/eas/tambah', [NilaiPesertaDBController::class, 'tambah'])->name('eas.tambah');
+Route::post('/eas', [NilaiPesertaDBController::class, 'store'])->name('eas.store');
