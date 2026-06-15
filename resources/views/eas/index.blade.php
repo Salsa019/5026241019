@@ -23,7 +23,7 @@
                 <td>
                     {{ ($np->nilaiteori + $np->nilaipraktek)/2 }}
                 </td>
-                <td>
+                <td class="{{ (($np->nilaiteori + $np->nilaipraktek) / 2) >= 75 ? 'bg-success' : 'bg-danger' }} text-white">
                     @if ((($np->nilaiteori + $np->nilaipraktek)/2) >= 75)
                         Lulus
                     @else
